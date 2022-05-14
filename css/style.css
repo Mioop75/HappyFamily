@@ -1129,6 +1129,10 @@ body .locked {
     top: 0;
     bottom: 0;
     right: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
   }
 
   .intro__content {
