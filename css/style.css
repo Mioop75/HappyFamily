@@ -1101,7 +1101,8 @@ body .locked {
   }
 
   .benefits {
-    margin-top: 40px;
+    padding-top: 45px;
+    margin-top: 0;
   }
 
   .benefits__container {
@@ -1109,7 +1110,7 @@ body .locked {
   }
 
   .benefits__card {
-    min-height: 268px;
+    min-height: 232px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
