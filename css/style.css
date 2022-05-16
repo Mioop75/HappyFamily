@@ -643,9 +643,6 @@ body .locked {
   display: block;
   margin: 0 auto;
   border-radius: 24px;
-}
-
-.welcome__video:not(:last-child) {
   margin-bottom: 80px;
 }
 
@@ -1266,6 +1263,10 @@ body .locked {
     display: none;
   }
 
+  .courses__grid {
+    overflow: visible;
+  }
+
   .courses__wrapper {
     display: -ms-grid;
     display: grid;
@@ -1568,7 +1569,7 @@ body .locked {
 }
 
 @media (max-width: 767.98px) {
-  .welcome__video:not(:last-child) {
+  .welcome__video {
     margin-bottom: 40px;
   }
 
