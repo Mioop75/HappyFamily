@@ -9,8 +9,8 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="robots" content="">
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@400;700&family=Lato:wght@400;700&display=swap&_v=20220516162401" rel="stylesheet">
-<link rel="stylesheet" href="css/style.min.css?_v=20220516162401">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@400;700&family=Lato:wght@400;700&display=swap&_v=20220604201016" rel="stylesheet">
+<link rel="stylesheet" href="css/style.min.css?_v=20220604201016">
 <title>Happy Family</title>
 </head>
 
@@ -18,14 +18,15 @@
   <div class="wrapper">
     <header class="header">
   <div class="container header__container">
-    <a href="#" class="logo header__logo">
+    <a href="/" class="logo header__logo">
       <img src="img/logo.svg" alt="Логотип">
     </a>
     <nav class="menu header__menu">
       <ul class="menu__list">
-        <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Курсы и цены</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Наши специалисты</a></li>
+        <li class="menu__item"><a href="/" class="menu__link">Главная</a></li>
+        <li class="menu__item"><a href="about.html" class="menu__link">О нас</a></li>
+        <li class="menu__item"><a href="courses.html" class="menu__link">Курсы и цены</a></li>
+        <li class="menu__item"><a href="our.html" class="menu__link">Наши специалисты</a></li>
         <li class="menu__started"><a href="#" class="menu__btn"> <span>Начать обучение</span>
             <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.99997 0L0.589966 1.41L5.16997 6L0.589966 10.59L1.99997 12L7.99997 6L1.99997 0Z"
@@ -100,13 +101,14 @@
             <p>Перед Вами краткое руководство по родительству, где собрана вся важная и проверенная информация.
               Столкнувшись на собственном опыте со сложностью поиска информации и проблемой проверки её достоверности,
               мы решили упростить Вам задачу.</p>
-            <p>Для этого мы собрали и структурировали всё самое насущное и необходимое в одном месте. Информация
+            <p class="welcome-text__hide welcome-text__hide--hidden">Для этого мы собрали и структурировали всё самое насущное и необходимое в одном месте. Информация
               представлена в формате видео-лекций (с дополнительными текстовыми материалами), в которых
               высококвалифицированные, опытные специалисты рассказывают о родительстве, уходе за детьми, их воспитании и
               развитии.</p>
-            <p>Это замечательная возможность узнать больше о том, как вырастить счастливых детей, оставаясь при этом
+            <p class="welcome-text__hide welcome-text__hide--hidden">Это замечательная возможность узнать больше о том, как вырастить счастливых детей, оставаясь при этом
               счастливыми родителями! Приобретайте курсы и радуйтесь Вашей прекрасной роли родителей вместе с нами!</p>
           </div>
+          <div class="welcome__hide">Раскрыть</div>
           <a href="#" class="btn btn--transapent welcome__btn"><span>Подробнее</span><svg width="8" height="13"
               viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 0.128662L0.589996 1.53866L5.17 6.12866L0.589996 10.7187L2 12.1287L8 6.12866L2 0.128662Z"
@@ -118,17 +120,23 @@
       <section class="lectures">
         <div class="container">
           <div class="lectures__content">
-            <div class="lectures__free">Бесплатно первые 3 лекции</div>
+            <div class="lectures__free">Бонус в каждом курсе - бесплатный вебинар</div>
             <h2 class="title lectures__title">20 способов воспитать счастливого ребенка</h2>
             <div class="lectures__videos">
               <div class="lectures__video">
-                <picture><source srcset="img/videos/01.webp" type="image/webp"><img src="img/videos/01.jpg" alt=""></picture>
+                <iframe src="https://www.youtube.com/embed/5lCRsLjMeso" title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
               </div>
               <div class="lectures__video">
-                <picture><source srcset="img/videos/02.webp" type="image/webp"><img src="img/videos/02.jpg" alt=""></picture>
+                <iframe src="https://www.youtube.com/embed/5lCRsLjMeso" title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>>
               </div>
               <div class="lectures__video">
-                <picture><source srcset="img/videos/03.webp" type="image/webp"><img src="img/videos/03.jpg" alt=""></picture>
+                <iframe src="https://www.youtube.com/embed/5lCRsLjMeso" title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
               </div>
             </div>
             <div class="lectures__desc">Мы захотели упростить задачу для других родителей и собрать всю нужную и
@@ -149,60 +157,8 @@
       <section class="specialist">
         <div class="specialist__container">
           <picture><source srcset="img/people/persons.webp" type="image/webp"><img src="img/people/persons.png" alt=""></picture>
-          <!--<div class="specialist__item">
-            <picture><source srcset="img/people/01.webp" type="image/webp"><img src="img/people/01.jpg" alt="" class="specialist__img"></picture>
-            <div class="specialist__desc">Семейный
-              психолог</div>
-          </div>
-          <div class="specialist__item">
-            <picture><source srcset="img/people/02.webp" type="image/webp"><img src="img/people/02.jpg" alt="" class="specialist__img"></picture>
-            <div class="specialist__desc">Педагог
-              по дошкольному
-              развитию</div>
-          </div>
-          <div class="specialist__item">
-            <picture><source srcset="img/people/03.webp" type="image/webp"><img src="img/people/03.jpg" alt="" class="specialist__img"></picture>
-            <div class="specialist__desc">Детский психолог</div>
-          </div>
-          <div class="specialist__item">
-            <picture><source srcset="img/people/04.webp" type="image/webp"><img src="img/people/04.jpg" alt="" class="specialist__img"></picture>
-            <div class="specialist__desc">Педагог
-              по дошкольному
-              развитию</div>
-          </div>
-          <div class="specialist__item">
-            <picture><source srcset="img/people/05.webp" type="image/webp"><img src="img/people/05.jpg" alt="" class="specialist__img"></picture>
-            <div class="specialist__desc">Консультант
-              по грудному
-              вскармливанию</div>
-          </div>
-          <div class="specialist__item">
-            <picture><source srcset="img/people/06.webp" type="image/webp"><img src="img/people/06.jpg" alt="" class="specialist__img"></picture>
-            <div class="specialist__desc">Врач
-              акушер-гинеколог</div>
-          </div>
-          <div class="specialist__item">
-            <picture><source srcset="img/people/07.webp" type="image/webp"><img src="img/people/07.jpg" alt="" class="specialist__img"></picture>
-            <div class="specialist__desc">Педиатр, неонатолог</div>
-          </div>
-          <div class="specialist__item">
-            <picture><source srcset="img/people/08.webp" type="image/webp"><img src="img/people/08.jpg" alt="" class="specialist__img"></picture>
-            <div class="specialist__desc">Консультант
-              по слингоношению</div>
-          </div>
-          <div class="specialist__item">
-            <picture><source srcset="img/people/09.webp" type="image/webp"><img src="img/people/09.jpg" alt="" class="specialist__img"></picture>
-            <div class="specialist__desc">Детский,
-              семейный психолог</div>
-          </div>
-          <div class="specialist__item">
-            <picture><source srcset="img/people/010.webp" type="image/webp"><img src="img/people/010.jpg" alt="" class="specialist__img"></picture>
-            <div class="specialist__desc">Консультант
-              по перинатальной
-              поддержке</div>
-          </div>-->
           <h2 class="title specialist__title">Наши специалисты</h2>
-          <a href="#" class="btn btn--transapent specialist__btn"><span>Подробнее</span><svg width="8" height="13"
+          <a href="our.html" class="btn btn--transapent specialist__btn"><span>Подробнее</span><svg width="8" height="13"
               viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M2.00003 0.128662L0.590027 1.53866L5.17003 6.12866L0.590027 10.7187L2.00003 12.1287L8.00003 6.12866L2.00003 0.128662Z"
@@ -288,6 +244,13 @@
   <div class="courses__container">
     <h2 class="title courses__title">Наши курсы</h2>
     <div class="courses__desc">Если куплен один пакет, на любой другой скидка 20%</div>
+    <div class="courses__block">
+      <img src="img/courses/monitor.svg" alt="" class="courses-block__img">
+      <div class="courses-block__content">
+        <div class="courses-block__free">Бесплатный вебинар</div>
+        <div class="courses-block__desc">20 способов вырастить счастливого ребёнка</div>
+      </div>
+    </div>
     <div class="courses__grid swiper">
       <div class="courses__wrapper swiper-wrapper">
         <div class="course swiper-slide">
@@ -389,8 +352,8 @@
           </div>
         </div>
       </div>
-      <div class="courses__pagination"></div>
     </div>
+    <div class="courses__pagination"></div>
   </div>
 </section>
       <section class="contact">
@@ -449,8 +412,8 @@
   </div>
 </footer>
   </div>
-  <script src="js/libs.js?_v=20220516162401"></script>
-  <script src="js/main.js?_v=20220516162401"></script>
+  <script src="js/libs.js?_v=20220604201016"></script>
+  <script src="js/main.js?_v=20220604201016"></script>
 </body>
 
 </html>
