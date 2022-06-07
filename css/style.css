@@ -1734,6 +1734,7 @@ body.locked {
 }
 
 .creators-block__img {
+  display: block;
   margin-right: 40px;
 }
 
@@ -2626,7 +2627,7 @@ body.locked {
 
   .our .specialists-item__btn:hover {
     color: #fff;
-    background-color: #7EC1FF;
+    background-color: #FC9700;
   }
 
   .our .specialists-item__btn:hover path {
