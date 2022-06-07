@@ -722,10 +722,21 @@ body.locked {
 }
 
 .welcome__video {
-  display: block;
-  margin: 0 auto;
+  max-width: 640px;
+  height: 360px;
+  position: relative;
+  margin: 0 auto 80px;
+}
+
+.welcome__video * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 24px;
-  margin-bottom: 80px;
 }
 
 .welcome__title {
@@ -816,7 +827,7 @@ body.locked {
   position: relative;
 }
 
-.lectures__video iframe {
+.lectures__video * {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1433,6 +1444,20 @@ body.locked {
 
 .about .welcome__video {
   max-width: 800px;
+  height: 450px;
+  position: relative;
+  margin: 0 auto 80px;
+}
+
+.about .welcome__video * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
 }
 
 .about .welcome__text p + p {
@@ -2272,7 +2297,7 @@ body.locked {
 
   .about .welcome__video {
     max-width: 688px;
-    width: 100%;
+    height: 388px;
     margin-bottom: 64px;
   }
 }
@@ -2280,6 +2305,8 @@ body.locked {
 @media (max-width: 767.98px) {
   .welcome__video {
     margin-bottom: 40px;
+    max-width: 688px;
+    height: 388px;
   }
 
   .welcome__title {
@@ -2530,7 +2557,15 @@ body.locked {
 
   .about .welcome__video {
     max-width: 280px;
+    height: 157px;
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 380px) {
+  .welcome__video {
+    max-width: 280px;
+    height: 157px;
   }
 }
 
