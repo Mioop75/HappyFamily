@@ -444,6 +444,30 @@ body.locked {
 }
 
 /*
+----------Animation-------------
+*/
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
 ----------Global-------------
 */
 
@@ -1306,9 +1330,6 @@ body.locked {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1317,14 +1338,23 @@ body.locked {
           align-items: center;
   z-index: 5;
   padding: 16px;
+  display: none;
+  overflow-y: auto;
+}
+
+.modal--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: fade 0.3s;
+          animation: fade 0.3s;
 }
 
 .modal__body {
   max-width: 1360px;
-  min-height: 868px;
   background-color: #FFFFFF;
   border-radius: 24px;
-  padding: 48px 64px 64px;
+  padding: 48px clamp(25px, 7vw, 64px) 64px;
 }
 
 .modal__close {
@@ -1367,7 +1397,7 @@ body.locked {
 }
 
 .modal__title {
-  max-width: 221px;
+  max-width: 300px;
   font-family: "Comfortaa", cursive;
   font-weight: 700;
   font-size: 22px;
@@ -1692,6 +1722,7 @@ body.locked {
   font-weight: 400;
   font-size: 18px;
   color: #546223;
+  background-color: transparent;
 }
 
 .our .specialists-item__btn svg path {
@@ -1734,6 +1765,8 @@ body.locked {
 }
 
 .creators-block__img {
+  max-width: 240px;
+  height: 280px;
   display: block;
   margin-right: 40px;
 }
@@ -2292,6 +2325,12 @@ body.locked {
     margin-top: 16px;
   }
 
+  .modal {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+
   .about .welcome::before {
     height: 320px;
   }
@@ -2300,6 +2339,10 @@ body.locked {
     max-width: 688px;
     height: 388px;
     margin-bottom: 64px;
+  }
+
+  .creators__title:not(:last-child) {
+    margin-bottom: 40px;
   }
 }
 
@@ -2430,6 +2473,10 @@ body.locked {
     display: none;
   }
 
+  .creators__title {
+    font-size: 24px;
+  }
+
   .creators__grid {
     grid-auto-rows: minmax(461px, auto);
   }
@@ -2439,10 +2486,16 @@ body.locked {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 24px;
   }
 
   .creators-block__img {
     max-width: 200px;
+    height: 233px;
+  }
+
+  .creators-block__title:not(:last-child) {
+    margin-bottom: 24px;
   }
 
   .creators-block__title {
@@ -2520,9 +2573,12 @@ body.locked {
     font-size: 24px;
   }
 
+  .courses__grid {
+    padding: 15px 7px;
+  }
+
   .courses__wrapper {
     height: 795px;
-    padding: 15px 7px;
   }
 
   .course {
@@ -2540,6 +2596,10 @@ body.locked {
   .home .benefits {
     padding-top: 45px;
     margin-top: 0;
+  }
+
+  .home .course__desc {
+    width: 302px;
   }
 
   .about .good__title {
@@ -2563,10 +2623,27 @@ body.locked {
   }
 }
 
+@media (max-width: 390px) {
+  .courses__wrapper {
+    height: 860px;
+  }
+
+  .home .course__desc {
+    width: 232px;
+  }
+}
+
 @media (max-width: 380px) {
   .welcome__video {
     max-width: 280px;
     height: 157px;
+  }
+}
+
+@media (max-width: 322px) {
+  .modal__close {
+    position: relative;
+    top: -26px;
   }
 }
 
@@ -2635,6 +2712,6 @@ body.locked {
   }
 
   .socials__link:hover path {
-    fill: #7EC1FF;
+    fill: #FC9700;
   }
 }
