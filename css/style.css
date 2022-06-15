@@ -543,6 +543,10 @@ body.locked {
           animation: fade 0.5s;
 }
 
+.header__logo {
+  z-index: 10;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
