@@ -531,10 +531,7 @@ body.locked {
 
 .header {
   background-color: #FFFFFF;
-  -webkit-box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
   z-index: 3;
-  position: relative;
 }
 
 .header__fixed {
@@ -542,6 +539,8 @@ body.locked {
   top: 0;
   right: 0;
   left: 0;
+  -webkit-animation: fade 0.5s;
+          animation: fade 0.5s;
 }
 
 .header__container {
@@ -959,7 +958,7 @@ body.locked {
 }
 
 .stock__btn svg {
-  margin: 5px 0 0 0px;
+  margin: 3px 0 0 0px;
 }
 
 .stock__row {
@@ -1326,18 +1325,18 @@ body.locked {
 .modal {
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  right: 0;
+  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  padding: 16px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 5;
-  padding: 16px;
   display: none;
   overflow-y: auto;
 }
@@ -1394,6 +1393,10 @@ body.locked {
   width: 240px;
   height: 280px;
   margin-bottom: 40px;
+}
+
+.modal__content {
+  text-align: left;
 }
 
 .modal__title {
@@ -2454,12 +2457,6 @@ body.locked {
     margin-top: 16px;
   }
 
-  .modal {
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-  }
-
   .about .welcome::before {
     height: 320px;
   }
@@ -2842,7 +2839,7 @@ body.locked {
 
   .our .specialists-item__btn:hover {
     color: #fff;
-    background-color: #FC9700;
+    background-color: #546223;
   }
 
   .our .specialists-item__btn:hover path {
